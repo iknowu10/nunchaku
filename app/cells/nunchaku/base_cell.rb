@@ -14,7 +14,7 @@ module Nunchaku
     protected
 
     def top_controller
-      controller.respond_to?(:parent_controller) ? controller.top_controller : controller
+      controller.respond_to?(:parent_controller) ? parent_controller.top_controller : parent_controller
     end
 
     def accessors_from(args)
