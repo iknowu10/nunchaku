@@ -4,7 +4,7 @@ module Nunchaku::BootstrapHelper
 
   def flash_content
     content_tag(:div, :class => 'flash_contents navbar-fixed-bottom') do
-      flash.map do |name, msg|
+      top_controller.flash.map do |name, msg|
         content_tag(:div, msg, :class => "#{flash_class(name)} text-center flash")
       end.join.html_safe
     end.html_safe
@@ -60,4 +60,3 @@ module Nunchaku::BootstrapHelper
     content_tag(:li, options) { link_to(*args, &block) }
   end
 end
-

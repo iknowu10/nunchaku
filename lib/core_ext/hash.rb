@@ -1,4 +1,3 @@
-#encoding: UTF-8
 class Hash
   def blank_to_nulls!
     each { |k, v| self[k] = nil if v.blank? }

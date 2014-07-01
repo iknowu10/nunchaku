@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <html>
   <%= render 'head' %>
-  <%= render 'body' %>
+
+  <body class="<%= engine_name %> <%= controller_name %> <%= action_name %>">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <%= masthead %>
+    </nav>
+
+    <%= flash_content %>
+
+    <section id="content" class="container">
+      <%= yield %>
+    </section>
+
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+      <%= footer %>
+    </nav>
+  </body>
 </html>

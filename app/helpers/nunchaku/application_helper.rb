@@ -1,9 +1,14 @@
-module Nunchaku::ApplicationHelper
-  include Nunchaku::LocaleHelper
-  include Nunchaku::BootstrapHelper
-  include Nunchaku::IconsHelper
+module Nunchaku
+  module ApplicationHelper
+    include LocaleHelper
+    include BootstrapHelper
+    include IconsHelper
+    include CellHelper
 
-  def engine_name
-    controller.class.name.deconstantize.downcase
+    protected
+
+    def engine_name
+      controller.class.name.deconstantize.downcase
+    end
   end
 end
