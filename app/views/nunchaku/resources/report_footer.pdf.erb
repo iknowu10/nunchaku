@@ -1,0 +1,8 @@
+<%=
+    render :partial => 'page_footer',
+           :locals => {
+                   :collection => collection,
+                   :resource_class => resource_class,
+                   :column_names => decorator_class.column_names
+           }
+%>
